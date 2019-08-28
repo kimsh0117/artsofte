@@ -5,11 +5,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Requirements
 1. [X] routing
 2. form validation
-  * [X] номер каты: string
-  * [X] ФИО держателя: string
-  * [X] Активна до месяц (селект): number
-  * [X] Активна до год (селект): number
-  * [X] Сумма: number
+    * [X] номер каты: string
+    * [X] ФИО держателя: string
+    * [X] Активна до месяц (селект): number
+    * [X] Активна до год (селект): number
+    * [X] Сумма: number
 3. [X] use view-model
 4. [X] use singleton service
 5. [X] При клике по кнопке «Перевести» В singleton-сервис нужно добавлять всю модель формы.
