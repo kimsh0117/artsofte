@@ -3,20 +3,20 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
 
 ## Requirements
-1. [X] routing
+1. routing
 2. form validation
-    * [X] номер каты: string
-    * [X] ФИО держателя: string
-    * [X] Активна до месяц (селект): number
-    * [X] Активна до год (селект): number
-    * [X] Сумма: number
-3. [X] use view-model
-4. [X] use singleton service
-5. [X] При клике по кнопке «Перевести» В singleton-сервис нужно добавлять всю модель формы.
-6. [X] при клике по кнопке 1 операция удаляется из singleton-сервис. При клике по кнопке 2 view-модель должна подставляться в форму перевода.
+    * номер каты: string
+    * ФИО держателя: string
+    * Активна до месяц (селект): number
+    * Активна до год (селект): number
+    * Сумма: number
+3. use view-model
+4. use singleton service
+5. При клике по кнопке «Перевести» В singleton-сервис нужно добавлять всю модель формы.
+6. при клике по кнопке 1 операция удаляется из singleton-сервис. При клике по кнопке 2 view-модель должна подставляться в форму перевода.
 
 ## Deploy
-[Netlify](https://compassionate-agnesi-1382fe.netlify.com/)
+[Demo: click here](https://compassionate-agnesi-1382fe.netlify.com/)
 
 ## Development server
 
