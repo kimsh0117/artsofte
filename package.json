@@ -1,6 +1,13 @@
 {
   "name": "artsofte-angular",
   "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "kimsanghun"
+  },
+  "keywords": [
+    "Angular"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

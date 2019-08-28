@@ -1,0 +1,50 @@
+<div class="history">
+  <table class="history__table">
+    <thead class="history__table__thead">
+      <tr class="history__table__thead__tr">
+        <th class="history__table__thead__tr__th">No</th>
+        <th class="history__table__thead__tr__th">Карта плательщика</th>
+        <th class="history__table__thead__tr__th">Карта получателя</th>
+        <th class="history__table__thead__tr__th">Сумма</th>
+        <th class="history__table__thead__tr__th">Дата выполнение</th>
+        <th class="history__table__thead__tr__th">Действие</th>
+      </tr>
+    </thead>
+    <tbody class="history__table__tbody">
+      <tr
+        *ngFor="let history of getHistory(); let i = index"
+        class="history-table__tbody__tr"
+      >
+        <td class="history__table__tbody__tr__td">{{ i }}</td>
+        <td class="history__table__tbody__tr__td">
+          {{ history.sender_card1 }} **** ****
+          {{ history.sender_card4 }}
+        </td>
+        <td class="history__table__tbody__tr__td">
+          {{ history.receiver_card1 }} **** ****
+          {{ history.receiver_card4 }}
+        </td>
+        <td class="history__table__tbody__tr__td">
+          {{ history.sum }}
+        </td>
+        <td class="history__table__tbody__tr__td">
+          {{ history.timeStamp }}
+        </td>
+        <td class="history__table__tbody__tr__td">
+          <button
+            (click)="addHistory(history)"
+            class="history__table__tbody__tr__td__button"
+          >
+            повторить
+          </button>
+          <button
+            (click)="removeHistory(history.id)"
+            class="history__table__tbody__tr__td__button"
+          >
+            удалить
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

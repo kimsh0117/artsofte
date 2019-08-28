@@ -1,0 +1,236 @@
+<form
+  [formGroup]="checkoutForm"
+  class="card"
+  (ngSubmit)="onSubmit(checkoutForm.value)"
+>
+  <div class="card__all">
+    <div class="card__all__sender">
+      <h2 class="card__all__sender__title">карта плательщика</h2>
+      <div class="card__all__sender__number">
+        <label class="card__all__sender__number__label " for="number"
+          >номер</label
+        >
+        <div class="card__all__sender__number__inputs">
+          <div class="card__all__sender__number__inputs__input">
+            <input
+              type="text"
+              formControlName="sender_card1"
+              pattern="^[0-9]*$"
+              maxlength="4"
+              minLength="4"
+              [ngClass]="{ 'is-invalid': submitted && f.sender_card1.errors }"
+            />
+            <div *ngIf="submitted && f.sender_card1.errors">
+              <div *ngIf="f.sender_card1.errors.required">
+                number is required
+              </div>
+              <div *ngIf="f.sender_card1.errors.pattern">only 0-9 number</div>
+              <div *ngIf="f.sender_card1.errors.minlength">min length is 4</div>
+            </div>
+          </div>
+          <div class="card__all__sender__number__inputs__input">
+            <input
+              type="text"
+              formControlName="sender_card2"
+              pattern="^[0-9]*$"
+              maxlength="4"
+              [ngClass]="{ 'is-invalid': submitted && f.sender_card2.errors }"
+            />
+            <div *ngIf="submitted && f.sender_card2.errors">
+              <div *ngIf="f.sender_card2.errors.required">
+                number is required
+              </div>
+              <div *ngIf="f.sender_card2.errors.pattern">only 0-9 number</div>
+              <div *ngIf="f.sender_card2.errors.minlength">min length is 4</div>
+            </div>
+          </div>
+          <div class="card__all__sender__number__inputs__input">
+            <input
+              type="text"
+              formControlName="sender_card3"
+              pattern="^[0-9]*$"
+              maxlength="4"
+              [ngClass]="{ 'is-invalid': submitted && f.sender_card3.errors }"
+            />
+            <div *ngIf="submitted && f.sender_card3.errors">
+              <div *ngIf="f.sender_card3.errors.required">
+                number is required
+              </div>
+              <div *ngIf="f.sender_card3.errors.pattern">only 0-9 number</div>
+              <div *ngIf="f.sender_card3.errors.minlength">min length is 4</div>
+            </div>
+          </div>
+          <div class="card__all__sender__number__inputs__input">
+            <input
+              type="text"
+              formControlName="sender_card4"
+              pattern="^[0-9]*$"
+              maxlength="4"
+              [ngClass]="{ 'is-invalid': submitted && f.sender_card4.errors }"
+            />
+            <div *ngIf="submitted && f.sender_card4.errors">
+              <div *ngIf="f.sender_card4.errors.required">
+                number is required
+              </div>
+              <div *ngIf="f.sender_card4.errors.pattern">only 0-9 number</div>
+              <div *ngIf="f.sender_card4.errors.minlength">min length is 4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card__all__sender__namedate">
+        <div class="card__all__sender__namedate__name">
+          <label for="name">ФИО держателя</label>
+          <input
+            type="text"
+            formControlName="sender_name"
+            pattern="[a-zA-Z]*"
+            [ngClass]="{ 'is-invalid': submitted && f.sender_name.errors }"
+          />
+          <div *ngIf="submitted && f.sender_name.errors">
+            <div *ngIf="f.sender_name.errors.pattern">
+              is required only string
+            </div>
+          </div>
+        </div>
+        <div class="card__all__sender__namedate__date">
+          <label for="limit">активна до</label>
+          <div class="card__all__sender__namedate__date__monthyear">
+            <div class="card__all__sender__namedate__date__month">
+              <select
+                formControlName="sender_card_month"
+                [ngClass]="{
+                  'is-invalid': submitted && f.sender_card_month.errors
+                }"
+              >
+                <option *ngFor="let month of months" [ngValue]="month">{{
+                  month
+                }}</option>
+              </select>
+              <div *ngIf="submitted && f.sender_card_month.errors">
+                <div *ngIf="f.sender_card_month.errors.required">
+                  month is required
+                </div>
+              </div>
+            </div>
+            <div class="card__all__sender__namedate__date__year">
+              <select
+                formControlName="sender_card_year"
+                [ngClass]="{
+                  'is-invalid': submitted && f.sender_card_year.errors
+                }"
+              >
+                <option *ngFor="let year of years" [ngValue]="year">{{
+                  year
+                }}</option>
+              </select>
+              <div *ngIf="submitted && f.sender_card_year.errors">
+                <div *ngIf="f.sender_card_year.errors.required">
+                  year is required
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card__all__receiver">
+      <h2 class="card__all__receiver__title">карта получателя</h2>
+      <div class="card__all__receiver__number">
+        <label class="card__all__receiver__number__label" for="number"
+          >номер</label
+        >
+        <div class="card__all__receiver__number__inputs">
+          <div class="card__all__receiver__number__inputs__input">
+            <input
+              type="text"
+              formControlName="receiver_card1"
+              pattern="^[0-9]*$"
+              maxlength="4"
+              [ngClass]="{ 'is-invalid': submitted && f.receiver_card1.errors }"
+            />
+            <div *ngIf="submitted && f.receiver_card1.errors">
+              <div *ngIf="f.receiver_card1.errors.required">
+                number is required
+              </div>
+              <div *ngIf="f.receiver_card1.errors.pattern">only 0-9 number</div>
+              <div *ngIf="f.receiver_card1.errors.minlength">
+                min length is 4
+              </div>
+            </div>
+          </div>
+          <div class="card__all__receiver__number__inputs__input">
+            <input
+              type="text"
+              formControlName="receiver_card2"
+              pattern="^[0-9]*$"
+              maxlength="4"
+              [ngClass]="{ 'is-invalid': submitted && f.receiver_card2.errors }"
+            />
+            <div *ngIf="submitted && f.receiver_card2.errors">
+              <div *ngIf="f.receiver_card2.errors.required">
+                number is required
+              </div>
+              <div *ngIf="f.receiver_card2.errors.pattern">only 0-9 number</div>
+              <div *ngIf="f.receiver_card2.errors.minlength">
+                min length is 4
+              </div>
+            </div>
+          </div>
+          <div class="card__all__receiver__number__inputs__input">
+            <input
+              type="text"
+              formControlName="receiver_card3"
+              pattern="^[0-9]*$"
+              maxlength="4"
+              [ngClass]="{ 'is-invalid': submitted && f.receiver_card3.errors }"
+            />
+            <div *ngIf="submitted && f.receiver_card3.errors">
+              <div *ngIf="f.receiver_card3.errors.required">
+                number is required
+              </div>
+              <div *ngIf="f.receiver_card3.errors.pattern">only 0-9 number</div>
+              <div *ngIf="f.receiver_card3.errors.minlength">
+                min length is 4
+              </div>
+            </div>
+          </div>
+          <div class="card__all__receiver__number__inputs__input">
+            <input
+              type="text"
+              formControlName="receiver_card4"
+              pattern="^[0-9]*$"
+              maxlength="4"
+              [ngClass]="{ 'is-invalid': submitted && f.receiver_card4.errors }"
+            />
+            <div *ngIf="submitted && f.receiver_card4.errors">
+              <div *ngIf="f.receiver_card4.errors.required">
+                number is required
+              </div>
+              <div *ngIf="f.receiver_card4.errors.pattern">only 0-9 number</div>
+              <div *ngIf="f.receiver_card4.errors.minlength">
+                min length is 4
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card__sum">
+    <div class="card__sum__input">
+      <input
+        type="number"
+        placeholder="сумма"
+        formControlName="sum"
+        pattern="^[0-9]*$"
+        [ngClass]="{ 'is-invalid': submitted && f.sum.errors }"
+      />
+      <div *ngIf="submitted && f.sum.errors">
+        <div *ngIf="f.sum.errors.required">sum is required</div>
+        <div *ngIf="f.sum.errors.pattern">only number</div>
+      </div>
+    </div>
+    <button class="card__sum__button" type="submit">перевести</button>
+  </div>
+</form>

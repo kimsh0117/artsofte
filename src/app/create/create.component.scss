@@ -1,0 +1,116 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 0 0 0;
+  &__all {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+    &__sender {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      margin-right: 50px;
+      height: 250px;
+      padding: 30px 5px;
+      border-radius: 25px;
+      width: 390px;
+      &__title {
+        font-size: 25px;
+        padding-left: 60px;
+        margin-bottom: 20px;
+      }
+      &__number {
+        margin-bottom: 20px;
+        &__label {
+          padding-left: 20px;
+        }
+        &__inputs {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          &__input {
+            input[type="text"] {
+              width: 90px;
+              border-radius: 5px;
+              border: 1px solid black;
+            }
+          }
+        }
+      }
+      &__namedate {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &__name {
+          display: flex;
+          flex-direction: column;
+          input[type="text"] {
+            border-radius: 5px;
+            border: 1px solid black;
+          }
+        }
+        &__date {
+          display: flex;
+          flex-direction: column;
+          &__monthyear {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+    &__receiver {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      height: 250px;
+      padding: 30px 5px;
+      border-radius: 25px;
+      width: 390px;
+      &__title {
+        font-size: 25px;
+        padding-left: 60px;
+        margin-bottom: 20px;
+      }
+      &__number {
+        &__label {
+          padding-left: 20px;
+        }
+        &__inputs {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          &__input {
+            input[type="text"] {
+              width: 90px;
+              border-radius: 5px;
+              border: 1px solid black;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__sum {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__input {
+      input[type=number] {
+        border-radius: 5px;
+        border: 1px solid black;
+        height: 40px;
+      }
+    }
+    &__button {
+      height: 40px;
+      border: 1px solid black;
+      color: black;
+    }
+  }
+}
